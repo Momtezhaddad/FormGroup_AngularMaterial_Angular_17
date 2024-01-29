@@ -35,6 +35,9 @@ export class AppComponent {
     password: new FormControl('', Validators.required),
   });
 
+  reset() {
+    this.loginForm.reset();
+  }
   submit() {
     if (this.loginForm.invalid) {
       alert('please complete the required fields');
